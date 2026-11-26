@@ -7,6 +7,6 @@
     "email": "tnlee@o-research.si"
   },
   "license": "PolyForm-Noncommercial-1.0.0",
-  "icon": "./.claude-plugin/icon.jpg",
+  "icon": "./.claude-plugin/icon.png",
   "types": "./types/index.d.ts"
 }
