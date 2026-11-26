@@ -1,9 +1,9 @@
 import { expect, mock, test } from 'claude-code/testing'
 
-import { PLAY_MS, SHEET, SUBJECT } from '../hooks/art/overlay'
+import { PLAY_MS, SUBJECT } from '../hooks/art/overlay'
 import { seasonal } from '../hooks/calendar'
 import { nearHalo, tap } from '../hooks/clicks'
-import { sceneSource } from '../hooks/scene'
+import { sceneSource, SHEET } from '../hooks/scene'
 import { THEMES } from '../hooks/themes'
 
 const LIMIT = 131_072

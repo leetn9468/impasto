@@ -25,6 +25,19 @@ Click the angel's halo three times, one click at a time, about half a second apa
 
 `/impasto devil` calls him without the clicks. `/impasto debug` shows which clicks the app passed to the skin, if the halo seems not to answer.
 
+## What the mod does inside Claude Code
+
+It is a hooks module, and this is all of it:
+
+- At `session.start` it registers the one command, `/impasto`, and sets the theme you last chose: the interface colours and which painting is the backdrop.
+- It hooks `command.run` for `/impasto` only, its own command, to answer it: switch scene, call the devil, show the click count, or turn the skin off. It does not see or change any other command.
+- It hooks `ui.pointer`, the clicks the app reports on the bare backdrop, to count clicks on the halo, and passes every click on unchanged.
+- It hooks `ui.render` for the `Backdrop` it set, and draws the painting there as an SVG. It draws nothing else and changes no other part of the interface.
+
+It keeps two things: the scene you chose (so the next session opens on it) and, for the session, whether the halo is lit or the prank is playing. It reads no files, runs no programs, calls no tools and makes no network requests.
+
+The paintings and the colours are data, made when the mod is built: the files under `hooks/art/` are written by a painter script, not by hand, which is why they are long lists of strokes.
+
 ## Where it draws
 
 The painting shows in the Claude desktop app and the mobile app. In a terminal there is no backdrop to paint on, so only the colours change. The prank's animation plays in the desktop app; with Reduce Motion on, the app plays no animation and the angel simply stays where he is.
