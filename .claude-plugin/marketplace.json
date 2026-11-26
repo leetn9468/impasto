@@ -1,0 +1,6 @@
+{
+  "name": "impasto",
+  "description": "Impasto, an oil-painted skin for Claude Code.",
+  "owner": { "name": "TN Lee" },
+  "plugins": [{ "name": "impasto", "source": "./" }]
+}

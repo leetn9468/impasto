@@ -1,0 +1,8 @@
+{
+  "name": "impasto",
+  "version": "1.0.0",
+  "description": "An oil-painted skin: six thick-paint scenes behind the conversation, an angel Claude who guards your code, and a devil who drops in when you click the angel's halo three times.",
+  "author": { "name": "TN Lee", "email": "tnlee@o-research.si" },
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "types": "./types/index.d.ts"
+}
